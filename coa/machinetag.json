@@ -1,7 +1,8 @@
 {
   "namespace": "coa",
+  "expanded": "course of action",
   "description": "Course of action taken within organization to discover, detect, deny, disrupt, degrade, deceive and/or destroy an attack.",
-  "version": 2,
+  "version": 3,
   "predicates": [
     {
       "value": "discover",
@@ -53,7 +54,7 @@
         },
         {
           "value": "pcap",
-          "expanded": "Discovered in packet-capture logs",
+          "expanded": "Searched historical packet-capture logs",
           "colour": "#006681"
         },
         {
@@ -118,17 +119,17 @@
       "entry": [
         {
           "value": "proxy",
-          "expanded": "Detect by Proxy infrastructure",
+          "expanded": "Detect by proxy infrastructure",
           "colour": "#0abdeb"
         },
         {
           "value": "nids",
-          "expanded": "Detect by Network Intrusion detection system.",
+          "expanded": "Detect by network intrusion detection system.",
           "colour": "#13c5f4"
         },
         {
           "value": "hids",
-          "expanded": "Detect by Host Intrusion detection system.",
+          "expanded": "Detect by host intrusion detection system.",
           "colour": "#24c9f5"
         },
         {
@@ -187,13 +188,8 @@
       "predicate": "deny",
       "entry": [
         {
-          "value": "proxy",
-          "expanded": "Implemented a proxy filter.",
-          "colour": "#f09105"
-        },
-        {
           "value": "firewall",
-          "expanded": "Implemented a block rule on a firewall.",
+          "expanded": "Implemented an incoming block rule on a firewall.",
           "colour": "#f99a0e"
         },
         {
@@ -203,7 +199,7 @@
         },
         {
           "value": "email",
-          "expanded": "Implemented a filter on a mail transfer agent.",
+          "expanded": "Implemented an ingress filter on a mail transfer agent.",
           "colour": "#faa830"
         },
         {
@@ -232,6 +228,16 @@
       "predicate": "disrupt",
       "entry": [
         {
+          "value": "proxy",
+          "expanded": "Implemented a proxy filter.",
+          "colour": "#f00405"
+        },
+        {
+          "value": "firewall",
+          "expanded": "Implemented an outgoing block rule on a firewall.",
+          "colour": "#f9030e"
+        },
+        {
           "value": "nips",
           "expanded": "Implemented a rule on a network IPS.",
           "colour": "#660389"
@@ -248,13 +254,18 @@
         },
         {
           "value": "email",
-          "expanded": "Quarantined an email.",
+          "expanded": "Quarantined an email or implemented an egress filter on a mail transfer agent.",
           "colour": "#8d04bd"
         },
         {
           "value": "memory-protection",
           "expanded": "Implemented memory protection like DEP and/or ASLR.",
           "colour": "#9a04ce"
+        },
+        {
+          "value": "app-blacklisting",
+          "expanded": "Marked unsafe in an application whitelisting solution.",
+          "colour": "#c906ee"
         },
         {
           "value": "sandboxing",
